@@ -20,7 +20,7 @@ public class SwaggerConfig {
 
     @Bean
     public Docket docket() {
-        return new Docket(DocumentationType.SPRING_WEB).apiInfo(apiInfo()).select()
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
                 .apis(RequestHandlerSelectors.basePackage("cn.kgc.tangcco.swagger.controller"))
                 .paths(PathSelectors.any()).build();
     }
